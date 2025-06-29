@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeBoard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+  <div class="container header-container">
+    <div class="header-left">
+      <img src="https://static.vecteezy.com/system/resources/previews/014/553/221/non_2x/life-skills-tactical-board-icon-outline-style-vector.jpg"alt="icon" class="logo" />
+      <div class="branding">
+        <h1>LifeBoard</h1>
+        <p>Organize, Track & Grow</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <p>Total Entries: <span id="entriesCount">0</span></p>
+      <p>Completed: <span id="completedCount">0</span></p>
+    </div>
+  </div>
+</header>
+
+    <main>
+    <section class="hero">
+           <h1>Your Digital Life, Organized</h1>
+              <p>Track your life events, set goals, and reflect on your journey.</p>
+    </section>
+    <div class="stat page-container">
+  <div class="tasks">
+    <span id="taskscount">0</span>
+    <p>Tasks</p>
+  </div>
+  <div class="goals">
+    <span id="goalscount">0</span>
+    <p>Goals</p>
+  </div>
+  <div class="links">
+    <span id="linkscount">0</span>
+    <p>Links</p>
+  </div>
+  <div class="quotes">
+    <span id="quotescount">0</span>
+    <p>Quotes</p>
+  </div>
+</div>
+    <section class="form-section">
+  <div class="form-card">
+    <h3>➕ Add New Entry</h3>
+    <p class="form-subtitle">
+      Create a new task, goal, link, or quote to organize your digital life
+    </p>
+
+    <form id="entryForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="type">Entry Type *</label>
+          <select id="type" name="type" required>
+            <option value="">Select entry type</option>
+            <option value="task">Task</option>
+            <option value="goal">Goal</option>
+            <option value="link">Link</option>
+            <option value="quote">Quote</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description *</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Add to LifeBoard</button>
+    </form>
+  </div>
+</section>
+ <section class="entries-section">
+  <div class="entry-grid" id="entriesGrid"></div>
+</section>
+
+
+</main>
+    <script src="script.js"></script>
+</body>
+</html>
